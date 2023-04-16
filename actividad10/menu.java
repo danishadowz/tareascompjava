@@ -30,11 +30,19 @@ public class menu {
 			double radius = scanner.nextDouble(); 
 			shape = new Circle(radius);
 			
-			resultado = shape.getArea(); 
-			System.out.println("El area del circulo es: " +resultado);
-			resultado2 = shape.getPerimeter();
-			System.out.println("El permietro del circulo es: " +resultado2); 
+			System.out.println("¿Que operacion deseas realizar? "); 
+			System.out.println("1. Area"); 
+			System.out.println("2. Perimetro"); 
+			int opcion2 = scanner.nextInt(); 
 			
+			if(opcion2 == 1) {
+				resultado = shape.getArea(); 
+				System.out.println("El area del circulo es: " +resultado);
+			}else {
+				resultado2 = shape.getPerimeter();
+				System.out.println("El permietro del circulo es: " +resultado2); 
+				
+			}
 			break;
 			
 		case 2: 
@@ -48,24 +56,42 @@ public class menu {
 			double side2 = scanner.nextDouble(); 
 			System.out.println("Ingresa la medida del tercer lado(abajo)");
 			double side3 = scanner.nextDouble(); 
-			
 			shape = new triangle(base, height, side1, side2, side3);
-			resultado = shape.getArea(); 
-			System.out.println("El area del triangulo es: " +resultado); 
-			resultado2 = shape.getPerimeter();  
-			System.out.println("El perimetro del triangulo es: " +resultado2); 
+			
+			System.out.println("¿Que operacion deseas realizar? "); 
+			System.out.println("1. Area"); 
+			System.out.println("2. Perimetro"); 
+			int opcion3 = scanner.nextInt(); 
+			
+			if(opcion3 == 1) {
+				resultado = shape.getArea(); 
+				System.out.println("El area del triangulo es: " +resultado); 
+			}else {
+				resultado2 = shape.getPerimeter();  
+				System.out.println("El perimetro del triangulo es: " +resultado2); 
+			}	
+			
+			
 			
 			break; 
 			
 		case 3: 
 			System.out.println("Ingresa la medida del lado");
 			double side = scanner.nextDouble(); 
-			
 			shape = new square(side); 
-			resultado = shape.getArea(); 
-			System.out.println("El area del cuadrado es: " +resultado); 
-			resultado2 = shape.getPerimeter(); 
-			System.out.println("El perimetro del cuadrado es: " +resultado2);
+			
+			System.out.println("¿Que operacion deseas realizar? "); 
+			System.out.println("1. Area"); 
+			System.out.println("2. Perimetro"); 
+			int opcion4 = scanner.nextInt(); 
+			
+			if(opcion4 == 1) {
+				resultado = shape.getArea(); 
+				System.out.println("El area del cuadrado es: " +resultado); 
+			}else {
+				resultado2 = shape.getPerimeter(); 
+				System.out.println("El perimetro del cuadrado es: " +resultado2);
+			}	
 			
 			break; 
 		case 4: 
@@ -73,12 +99,20 @@ public class menu {
 			double baser = scanner.nextDouble(); 
 			System.out.println("Ingresa la medida de la altura del rectangulo"); 
 			double alturar = scanner.nextDouble(); 
-			
 			shape = new rectangle(baser, alturar); 
-			resultado= shape.getArea(); 
-			System.out.println("El area del rectangulo es: "+resultado); 
-			resultado2 = shape.getPerimeter(); 
-			System.out.println("El perimetro del rectangulo es: " +resultado2); 
+			
+			System.out.println("¿Que operacion deseas realizar? "); 
+			System.out.println("1. Area"); 
+			System.out.println("2. Perimetro"); 
+			int opcion5 = scanner.nextInt(); 
+			
+			if(opcion5 == 1) {
+				resultado= shape.getArea(); 
+				System.out.println("El area del rectangulo es: "+resultado); 
+			}else {
+				resultado2 = shape.getPerimeter(); 
+				System.out.println("El perimetro del rectangulo es: " +resultado2); 
+			}	
 			break; 
 			
 			default: 
